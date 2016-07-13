@@ -7,12 +7,12 @@ while ($done == false) {
 	$answer++;
 	$input = $secretKey.$answer;
 	$hash = md5($input);
-	$firstFive = substr($hash, 0, 5);
-	if ($firstFive === "00000") {
+	$firstSix = substr($hash, 0, 6);
+	if ($firstSix === "000000") {
 		$done = true;
 	}
-	echo $hash;
-	echo "$firstFive\n";
+	// echo $hash;
+	// echo "$firstSix\n";
 }
 
 echo $input;
